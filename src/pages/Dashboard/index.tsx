@@ -1,8 +1,6 @@
 import _ from "lodash";
 import clsx from "clsx";
-import { useRef } from "react";
 import fakerData from "@/utils/faker";
-import { TinySliderElement } from "@/components/Base/TinySlider";
 import Lucide from "@/components/Base/Lucide";
 import Tippy from "@/components/Base/Tippy";
 

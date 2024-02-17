@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import DashboardOverview1 from "../pages/Dashboard";
+import Dashboard from "../pages/Dashboard";
 import Inbox from "../pages/Inbox";
 import ErrorPage from "../pages/ErrorPage";
 
@@ -13,7 +13,7 @@ function Router() {
       children: [
         {
           path: "/",
-          element: <DashboardOverview1 />,
+          element: <Dashboard />,
         },
         {
           path: "inbox",

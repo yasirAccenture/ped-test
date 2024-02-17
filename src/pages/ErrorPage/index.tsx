@@ -1,4 +1,3 @@
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import errorIllustration from "@/assets/images/error-illustration.svg";
 import Button from "@/components/Base/Button";
 
@@ -6,7 +5,6 @@ const Main = () => {
   return (
     <>
       <div className="py-2 bg-gradient-to-b from-theme-1 to-theme-2 dark:from-darkmode-800 dark:to-darkmode-800">
-        <ThemeSwitcher />
         <div className="container">
           {/* BEGIN: Error Page */}
           <div className="flex flex-col items-center justify-center h-screen text-center error-page lg:flex-row lg:text-left">
