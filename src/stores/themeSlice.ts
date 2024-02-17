@@ -1,79 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
-import RubickSideMenu from "@/themes/Rubick/SideMenu";
-import RubickSimpleMenu from "@/themes/Rubick/SimpleMenu";
-import RubickTopMenu from "@/themes/Rubick/TopMenu";
-import IcewallSideMenu from "@/themes/Icewall/SideMenu";
-import IcewallSimpleMenu from "@/themes/Icewall/SimpleMenu";
-import IcewallTopMenu from "@/themes/Icewall/TopMenu";
-import TinkerSideMenu from "@/themes/Tinker/SideMenu";
-import TinkerSimpleMenu from "@/themes/Tinker/SimpleMenu";
-import TinkerTopMenu from "@/themes/Tinker/TopMenu";
-import EnigmaSideMenu from "@/themes/Enigma/SideMenu";
-import EnigmaSimpleMenu from "@/themes/Enigma/SimpleMenu";
-import EnigmaTopMenu from "@/themes/Enigma/TopMenu";
+import EnigmaSideMenu from "@/themes/SideMenu";
 
 export const themes = [
-  {
-    name: "rubick",
-    layout: "side-menu",
-    component: RubickSideMenu,
-  },
-  {
-    name: "rubick",
-    layout: "simple-menu",
-    component: RubickSimpleMenu,
-  },
-  {
-    name: "rubick",
-    layout: "top-menu",
-    component: RubickTopMenu,
-  },
-  {
-    name: "icewall",
-    layout: "side-menu",
-    component: IcewallSideMenu,
-  },
-  {
-    name: "icewall",
-    layout: "simple-menu",
-    component: IcewallSimpleMenu,
-  },
-  {
-    name: "icewall",
-    layout: "top-menu",
-    component: IcewallTopMenu,
-  },
-  {
-    name: "tinker",
-    layout: "side-menu",
-    component: TinkerSideMenu,
-  },
-  {
-    name: "tinker",
-    layout: "simple-menu",
-    component: TinkerSimpleMenu,
-  },
-  {
-    name: "tinker",
-    layout: "top-menu",
-    component: TinkerTopMenu,
-  },
   {
     name: "enigma",
     layout: "side-menu",
     component: EnigmaSideMenu,
-  },
-  {
-    name: "enigma",
-    layout: "simple-menu",
-    component: EnigmaSimpleMenu,
-  },
-  {
-    name: "enigma",
-    layout: "top-menu",
-    component: EnigmaTopMenu,
-  },
+  }
 ] as const;
 
 export type Themes = (typeof themes)[number];
@@ -92,9 +26,9 @@ export const getTheme = (search?: {
   const searchValues =
     search === undefined
       ? {
-          name: localStorage.getItem("theme"),
-          layout: localStorage.getItem("layout"),
-        }
+        name: localStorage.getItem("theme"),
+        layout: localStorage.getItem("layout"),
+      }
       : search;
   return themes.filter((item, key) => {
     return (
@@ -141,7 +75,7 @@ export const { setTheme, setLayout } = themeSlice.actions;
 
 export const selectTheme = (state: RootState) => {
   if (localStorage.getItem("theme") === null) {
-    localStorage.setItem("theme", "rubick");
+    localStorage.setItem("theme", "enigma");
   }
 
   if (localStorage.getItem("layout") === null) {

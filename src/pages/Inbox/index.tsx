@@ -11,7 +11,7 @@ import {
 import Lucide from "@/components/Base/Lucide";
 import { Menu } from "@/components/Base/Headless";
 
-function Main() {
+const Main = () => {
   return (
     <>
       <div className="grid grid-cols-12 gap-6 mt-8">
@@ -297,9 +297,9 @@ function Main() {
                       "transition duration-200 ease-in-out transform cursor-pointer inline-block sm:block border-b border-slate-200/60 dark:border-darkmode-400",
                       "hover:scale-[1.02] hover:relative hover:z-20 hover:shadow-md hover:border-0 hover:rounded",
                       !faker.trueFalse[0] &&
-                        "bg-slate-100 text-slate-600 dark:text-slate-500 dark:bg-darkmode-400/70",
+                      "bg-slate-100 text-slate-600 dark:text-slate-500 dark:bg-darkmode-400/70",
                       faker.trueFalse[0] &&
-                        "bg-white text-slate-800 dark:text-slate-300 dark:bg-darkmode-600",
+                      "bg-white text-slate-800 dark:text-slate-300 dark:bg-darkmode-600",
                     ])}
                   >
                     <div className="flex px-5 py-3">
@@ -308,7 +308,7 @@ function Main() {
                           className="flex-none border-slate-400 checked:border-primary"
                           type="checkbox"
                           checked={faker.trueFalse[0]}
-                          onChange={() => {}}
+                          onChange={() => { }}
                         />
                         <a
                           href="#"
