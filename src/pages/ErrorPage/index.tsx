@@ -2,7 +2,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import errorIllustration from "@/assets/images/error-illustration.svg";
 import Button from "@/components/Base/Button";
 
-function Main() {
+const Main = () => {
   return (
     <>
       <div className="py-2 bg-gradient-to-b from-theme-1 to-theme-2 dark:from-darkmode-800 dark:to-darkmode-800">
