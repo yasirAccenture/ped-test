@@ -1,5 +1,5 @@
 declare module "tailwindcss/lib/util/color" {
-  const parseColor = (value: string): { color: Array<string> } => {};
+  const parseColor = (value: string): { color: Array<string> } => { };
   export { parseColor };
 }
 

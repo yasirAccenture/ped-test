@@ -4,7 +4,7 @@ import Firms from "../pages/Firms";
 import Professionals from "../pages/Professionals";
 import ErrorPage from "../pages/ErrorPage";
 
-import Layout from "../themes";
+import Layout from "../layout";
 
 function Router() {
   const routes = [

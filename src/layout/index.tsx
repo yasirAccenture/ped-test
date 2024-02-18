@@ -8,8 +8,8 @@ import { FormattedMenu, linkTo, nestedMenu, enter, leave } from "./side-menu";
 import Tippy from "@/components/Base/Tippy";
 import Lucide from "@/components/Base/Lucide";
 import clsx from "clsx";
-import TopBar from "@/components/Themes/TopBar";
-import MobileMenu from "@/components/MobileMenu";
+import TopBar from "@/components/Header";
+import MobileMenu from "@/layout/mobileMenu";
 
 function Main() {
   const navigate = useNavigate();

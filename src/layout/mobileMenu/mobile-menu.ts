@@ -1,21 +1,21 @@
 import { NavigateFunction } from "react-router-dom";
-import { Menu } from "@/stores/menuSlice";
 import { Dispatch, SetStateAction } from "react";
 import { slideUp, slideDown } from "@/utils/helper";
+import { TApplicationMenu } from "@/@types/applicationMenu";
 
 interface Location {
   pathname: string;
   forceActiveMenu?: string;
 }
 
-export interface FormattedMenu extends Menu {
+export interface FormattedMenu extends TApplicationMenu {
   active?: boolean;
   activeDropdown?: boolean;
   subMenu?: FormattedMenu[];
 }
 
 // Setup side menu
-const findActiveMenu = (subMenu: Menu[], location: Location): boolean => {
+const findActiveMenu = (subMenu: TApplicationMenu[], location: Location): boolean => {
   let match = false;
   subMenu.forEach((item) => {
     if (
@@ -33,7 +33,7 @@ const findActiveMenu = (subMenu: Menu[], location: Location): boolean => {
   return match;
 };
 
-const nestedMenu = (menu: Array<Menu | "divider">, location: Location) => {
+const nestedMenu = (menu: Array<TApplicationMenu | "divider">, location: Location) => {
   const formattedMenu: Array<FormattedMenu | "divider"> = [];
   menu.forEach((item) => {
     if (typeof item !== "string") {

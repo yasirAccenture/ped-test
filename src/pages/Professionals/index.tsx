@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <>
       <div className="grid grid-cols-12 gap-6 mt-8">
-        <div className="col-span-12 lg:col-span-3 2xl:col-span-2">
+        <div className="col-span-12 lg:col-span-4 2xl:col-span-3">
           <h2 className="mt-2 mr-auto text-lg font-medium intro-y">Professionals</h2>
           <div className="p-5 mt-6 intro-y box bg-primary">
             <div className="text-white border-white/10 dark:border-darkmode-400">
@@ -77,7 +77,7 @@ const Main = () => {
           </div>
           {/* END: Inbox Menu */}
         </div>
-        <div className="col-span-12 lg:col-span-9 2xl:col-span-10">
+        <div className="col-span-12 lg:col-span-8 2xl:col-span-9">
           {/* BEGIN: Inbox Filter */}
           <div className="flex flex-col-reverse items-center intro-y sm:flex-row">
             <div className="relative w-full mt-3 mr-auto sm:w-auto sm:mt-0">
