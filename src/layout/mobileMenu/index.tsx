@@ -9,7 +9,7 @@ import { selectMenu } from "@/stores/menuSlice";
 import { useAppSelector } from "@/stores/hooks";
 import { FormattedMenu, linkTo, nestedMenu, enter, leave } from "./mobile-menu";
 import Lucide from "@/components/Base/Lucide";
-import logoUrl from "@/assets/images/logo.svg";
+import logoUrl from "@/assets/images/sps-logo.jpeg";
 import clsx from "clsx";
 import SimpleBar from "simplebar";
 
@@ -48,7 +48,7 @@ function Main() {
           <a href="" className="flex mr-auto">
             <img
               alt="Midone Tailwind HTML Admin Template"
-              className="w-6"
+              className="w-15"
               src={logoUrl}
             />
           </a>

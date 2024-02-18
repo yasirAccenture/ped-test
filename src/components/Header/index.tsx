@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Lucide from "@/components/Base/Lucide";
-import logoUrl from "@/assets/images/logo.svg";
+import logoUrl from "@/assets/images/sps-logo.jpeg";
 import Breadcrumb from "@/components/Base/Breadcrumb";
 import { FormInput } from "@/components/Base/Form";
 import { Menu } from "@/components/Base/Headless";
@@ -39,17 +39,9 @@ function Main(props: { layout?: "side-menu" }) {
           >
             <img
               alt="Enigma Tailwind HTML Admin Template"
-              className="w-6"
+              className="w-15"
               src={logoUrl}
             />
-            <span
-              className={clsx([
-                "ml-3 text-lg text-white",
-                props.layout == "side-menu" && "hidden xl:block",
-              ])}
-            >
-              Enigma
-            </span>
           </Link>
           {/* END: Logo */}
           {/* BEGIN: Breadcrumb */}
