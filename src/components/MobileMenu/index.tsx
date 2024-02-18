@@ -5,7 +5,7 @@ import { useState, useEffect, createRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toRaw } from "@/utils/helper";
 import { selectMenu } from "@/stores/menuSlice";
-import { selectTheme } from "@/stores/themeSlice";
+// import { selectTheme } from "@/stores/themeSlice";
 import { useAppSelector } from "@/stores/hooks";
 import { FormattedMenu, linkTo, nestedMenu, enter, leave } from "./mobile-menu";
 import Lucide from "@/components/Base/Lucide";
@@ -19,8 +19,8 @@ function Main() {
   const [formattedMenu, setFormattedMenu] = useState<
     Array<FormattedMenu | "divider">
   >([]);
-  const themeStore = useAppSelector(selectTheme);
-  const menuStore = useAppSelector(selectMenu(themeStore.layout));
+  // const themeStore = useAppSelector(selectTheme);
+  const menuStore = useAppSelector(selectMenu());
   const menu = () => nestedMenu(toRaw(menuStore), location);
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   const scrollableRef = createRef<HTMLDivElement>();
@@ -158,7 +158,7 @@ function Main() {
                                     className={clsx([
                                       "menu__sub-icon",
                                       subMenu.activeDropdown &&
-                                        "transform rotate-180",
+                                      "transform rotate-180",
                                     ])}
                                   >
                                     <Lucide icon="ChevronDown" />

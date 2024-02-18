@@ -16,85 +16,62 @@ const Main = () => {
     <>
       <div className="grid grid-cols-12 gap-6 mt-8">
         <div className="col-span-12 lg:col-span-3 2xl:col-span-2">
-          <h2 className="mt-2 mr-auto text-lg font-medium intro-y">Inbox</h2>
-          {/* BEGIN: Inbox Menu */}
+          <h2 className="mt-2 mr-auto text-lg font-medium intro-y">Professionals</h2>
           <div className="p-5 mt-6 intro-y box bg-primary">
-            <Button
-              type="button"
-              className="w-full mt-1 bg-white text-slate-600 dark:text-slate-300 dark:bg-darkmode-300 dark:border-darkmode-300"
-            >
-              <Lucide icon="FilePenLine" className="w-4 h-4 mr-2" /> Compose
-            </Button>
-            <div className="pt-6 mt-6 text-white border-t border-white/10 dark:border-darkmode-400">
+            <div className="text-white border-white/10 dark:border-darkmode-400">
+              <h2 className="mt-2 mr-auto border-b text-lg font-medium intro-y">Favorites</h2>
               <a
                 href=""
-                className="flex items-center px-3 py-2 font-medium rounded-md bg-white/10 dark:bg-darkmode-700"
+                className="flex items-center px-3 py-2 mt-1 font-medium rounded-md bg-white/10 dark:bg-darkmode-700"
               >
-                <Lucide icon="Mail" className="w-4 h-4 mr-2" /> Inbox
+                <Lucide icon="Mail" className="w-4 h-4 mr-2" /> Articles
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 rounded-md"
               >
-                <Lucide icon="Star" className="w-4 h-4 mr-2" /> Marked
+                <Lucide icon="Star" className="w-4 h-4 mr-2" /> Deals
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 rounded-md"
               >
-                <Lucide icon="Inbox" className="w-4 h-4 mr-2" /> Draft
-              </a>
-              <a
-                href=""
-                className="flex items-center px-3 py-2 mt-2 rounded-md"
-              >
-                <Lucide icon="Send" className="w-4 h-4 mr-2" /> Sent
-              </a>
-              <a
-                href=""
-                className="flex items-center px-3 py-2 mt-2 rounded-md"
-              >
-                <Lucide icon="Trash" className="w-4 h-4 mr-2" /> Trash
+                <Lucide icon="Inbox" className="w-4 h-4 mr-2" /> Projects
               </a>
             </div>
-            <div className="pt-4 mt-4 text-white border-t border-white/10 dark:border-darkmode-400">
-              <a href="" className="flex items-center px-3 py-2 truncate">
+            <div className="pt-4 mt-4 text-white border-white/10 dark:border-darkmode-400">
+              <h2 className="mt-2 mr-auto border-b text-lg font-medium intro-y">Folders</h2>
+              <a href="" className="flex items-center px-3 mt-1 py-2 truncate">
                 <div className="w-2 h-2 mr-3 rounded-full bg-pending"></div>
-                Custom Work
+                Articles
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 truncate rounded-md"
               >
                 <div className="w-2 h-2 mr-3 rounded-full bg-success"></div>
-                Important Meetings
+                Deals
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 truncate rounded-md"
               >
                 <div className="w-2 h-2 mr-3 rounded-full bg-warning"></div>
-                Work
+                Firms
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 truncate rounded-md"
               >
                 <div className="w-2 h-2 mr-3 rounded-full bg-pending"></div>
-                Design
+                Professionals
               </a>
               <a
                 href=""
                 className="flex items-center px-3 py-2 mt-2 truncate rounded-md"
               >
                 <div className="w-2 h-2 mr-3 rounded-full bg-danger"></div>
-                Next Week
-              </a>
-              <a
-                href=""
-                className="flex items-center px-3 py-2 mt-2 truncate rounded-md"
-              >
-                <Lucide icon="Plus" className="w-4 h-4 mr-2" /> Add New Label
+                Projects
               </a>
             </div>
           </div>

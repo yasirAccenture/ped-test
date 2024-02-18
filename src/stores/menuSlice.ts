@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 import { type Themes } from "@/stores/themeSlice";
 import { icons } from "@/components/Base/Lucide";
-import sideMenu from "@/main/side-menu";
 
 export interface Menu {
   icon: keyof typeof icons;
@@ -27,8 +26,32 @@ export const menuSlice = createSlice({
   reducers: {},
 });
 
-export const selectMenu = (layout: Themes["layout"]) => (state: RootState) => {
-  return sideMenu;
+const menu: Array<Menu | "divider"> = [
+  {
+    icon: "Home",
+    title: "PED",
+    subMenu: [
+      {
+        icon: "PanelLeft",
+        pathname: "/",
+        title: "Deals",
+      },
+      {
+        icon: "PanelLeft",
+        pathname: "/Firms",
+        title: "Firms",
+      },
+      {
+        icon: "PanelLeft",
+        pathname: "/Professionals",
+        title: "Professionals",
+      },
+    ],
+  },
+];
+
+export const selectMenu = () => (state: RootState) => {
+  return menu;
 };
 
 export default menuSlice.reducer;

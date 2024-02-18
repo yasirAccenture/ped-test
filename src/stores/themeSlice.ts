@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
-import EnigmaSideMenu from "@/themes/SideMenu";
+import EnigmaSideMenu from "@/themes";
 
 export const themes = [
   {

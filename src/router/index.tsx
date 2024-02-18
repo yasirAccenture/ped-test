@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import Inbox from "../pages/Inbox";
+import Deals from "../pages/Deals";
+import Firms from "../pages/Firms";
+import Professionals from "../pages/Professionals";
 import ErrorPage from "../pages/ErrorPage";
 
 import Layout from "../themes";
@@ -13,14 +14,19 @@ function Router() {
       children: [
         {
           path: "/",
-          element: <Dashboard />,
+          element: <Deals />,
         },
         {
-          path: "inbox",
-          element: <Inbox />,
+          path: "/Firms",
+          element: <Firms />,
+        },
+        {
+          path: "/Professionals",
+          element: <Professionals />,
         },
       ],
     },
+
     {
       path: "/error-page",
       element: <ErrorPage />,
