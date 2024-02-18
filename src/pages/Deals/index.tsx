@@ -10,8 +10,11 @@ import {
 } from "@/components/Base/Form";
 import Lucide from "@/components/Base/Lucide";
 import { Menu } from "@/components/Base/Headless";
+import { useMsal } from '@azure/msal-react';
 
 const Main = () => {
+  const { instance } = useMsal()
+  const activeAccount = instance.getActiveAccount()
   return (
     <>
       <div className="grid grid-cols-12 gap-6 mt-8">
@@ -81,6 +84,7 @@ const Main = () => {
           {/* BEGIN: Inbox Filter */}
           <div className="flex flex-col-reverse items-center intro-y sm:flex-row">
             <div className="relative w-full mt-3 mr-auto sm:w-auto sm:mt-0">
+              {JSON.stringify(activeAccount)}
               <Lucide
                 icon="Search"
                 className="absolute inset-y-0 left-0 z-10 w-4 h-4 my-auto ml-3 text-slate-500"
@@ -90,6 +94,7 @@ const Main = () => {
                 className="w-full px-10 sm:w-64 !box"
                 placeholder="Search mail"
               />
+
               <Menu className="absolute inset-y-0 right-0 flex items-center mr-3">
                 <Menu.Button
                   as="a"

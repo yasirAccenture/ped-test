@@ -9,9 +9,19 @@ import fakerData from "@/utils/faker";
 import _ from "lodash";
 import clsx from "clsx";
 import { Transition } from "@headlessui/react";
+import { useMsal } from '@azure/msal-react';
 
 function Main(props: { layout?: "side-menu" }) {
-  const [searchDropdown, setSearchDropdown] = useState(false);
+  const [searchDropdown, setSearchDropdown] = useState(false)
+  const { instance } = useMsal()
+  const activeAccount = instance.getActiveAccount()
+
+  const logoutOnClick = () => {
+    instance.logoutRedirect({
+      account: instance.getActiveAccount(),
+    });
+  };
+
   const showSearchDropdown = () => {
     setSearchDropdown(true);
   };
@@ -164,18 +174,18 @@ function Main(props: { layout?: "side-menu" }) {
                 src={fakerData[9].photos[4]}
               />
             </Menu.Button>
-            <Menu.Items className="w-56 mt-px relative bg-primary/80 before:block before:absolute before:bg-black before:inset-0 before:rounded-md before:z-[-1] text-white">
+            <Menu.Items className="w-auto mt-px relative bg-primary/80 before:block before:absolute before:bg-black before:inset-0 before:rounded-md before:z-[-1] text-white">
               <Menu.Header className="font-normal">
-                <div className="font-medium">{fakerData[0].users[0].name}</div>
+                <div className="font-medium">{activeAccount?.name}</div>
                 <div className="text-xs text-white/70 mt-0.5 dark:text-slate-500">
-                  {fakerData[0].jobs[0]}
+                  {activeAccount?.username}
                 </div>
               </Menu.Header>
               <Menu.Item className="hover:bg-white/5">
                 <Lucide icon="User" className="w-4 h-4 mr-2" /> Profile
               </Menu.Item>
               <Menu.Divider className="bg-white/[0.08]" />
-              <Menu.Item className="hover:bg-white/5">
+              <Menu.Item className="hover:bg-white/5" onClick={logoutOnClick}>
                 <Lucide icon="ToggleRight" className="w-4 h-4 mr-2" /> Logout
               </Menu.Item>
             </Menu.Items>
