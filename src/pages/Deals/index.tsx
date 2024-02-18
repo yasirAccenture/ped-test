@@ -84,7 +84,6 @@ const Main = () => {
           {/* BEGIN: Inbox Filter */}
           <div className="flex flex-col-reverse items-center intro-y sm:flex-row">
             <div className="relative w-full mt-3 mr-auto sm:w-auto sm:mt-0">
-              {JSON.stringify(activeAccount)}
               <Lucide
                 icon="Search"
                 className="absolute inset-y-0 left-0 z-10 w-4 h-4 my-auto ml-3 text-slate-500"
